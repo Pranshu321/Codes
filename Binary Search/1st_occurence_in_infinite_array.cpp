@@ -22,7 +22,7 @@
  int searching(int a[],int n,int temp){
      int low=0;
      int high=1;
-     while(a[high]==0){
+     while(temp>a[high]){
          low=high;
          high=high*2;
      }

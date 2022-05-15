@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+
+int32_t main() {
+	// your code goes here
+	ios::sync_with_stdio(0);
+	cout.tie(0); cin.tie(0);
+priority_queue<int>pq;
+int a[]={7,10,4,3,20,15};
+int n=6,k=2;
+for(int i=0;i<n;i++){
+    pq.push(a[i]);
+    if(pq.size()>k){
+        pq.pop();
+    }
+}
+cout<<pq.top()<<" ";
+	
+	return 0;
+}

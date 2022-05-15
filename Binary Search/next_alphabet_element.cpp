@@ -3,20 +3,21 @@
  using namespace std;
  
  #define ll long long int
- char searching(string s,int n,char temp){
+ char searching(string a,int n,char temp){
      int start=0,end=n-1;
      char res='#';
      while(start<=end){
-        int mid=start+(end-start)/2;
-        if(s[mid]==temp){
-        start=mid+1;}
-        else if(s[mid]<temp){
-            start=mid+1;
-        }
-        else{
-            res=s[mid];
-            end=mid-1;
-        }
+         int mid=start+(end-start)/2;
+         if(a[mid]==temp){
+             start=mid+1;
+         }
+         else if(a[mid]<temp){
+             start=mid+1;
+         }
+         else{
+             res=a[mid];
+             end=mid-1;
+         }
      }
      return res;
  }
