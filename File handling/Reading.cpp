@@ -17,16 +17,18 @@ int main()
     cout.tie(0);
     cin.tie(0);
     ifstream ifs;
-    ifs.open("Me.txt");
+    ofstream ofs;
+    ofs.open("g.txt");
+    ofs << "This is good to have this";
+
+    ifs.open("g.txt");
     if (!ifs.is_open())
     {
         cout << "FIle cannot be opened.";
     }
     string str;
-    int x;
     ifs >> str;
-    ifs >> x;
-    cout << str << " " << x;
+    cout << str;
     if (ifs.eof())
     {
         cout << "End of file reached";

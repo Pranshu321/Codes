@@ -67,5 +67,5 @@ return 0 ;
 /* In this algorithm 
 1. first we made prefix table in that we are check that the starting elelemnts are maching which end one or not.
 2. then we can match the pattern with the given string
-3. in that on prefix table string we place j and i on main string in this i only move forward direction but j can backtact , j will backtrack when there the mismatch happen and we checj i with j+1 element .
+3. in that on prefix table string we place j and i on main string in this i only move forward direction but j can backtact , j will backtrack when there the mismatch happen and we check i with j+1 element .
 */
