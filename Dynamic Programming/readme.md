@@ -47,5 +47,105 @@ We also cache the results store in dp or array.
 When we use bottom we find all possible cases but in top down we only find essential cases.
 `f(1) --> f(2) --> f(3) --> f(4)`
 
+- Forward DP
+When we know some of the results and using that values we find the solution of others.
+
+![image](https://user-images.githubusercontent.com/86917304/190857265-87302abd-51e8-42ee-a8e2-36bd0f7bddde.png)
+
+- Backward DP
+We know only the result of one sub problem and find others solutions.
+
+![image](https://user-images.githubusercontent.com/86917304/190857309-bd454b4a-979a-482c-937b-ba3c062c79c5.png)
+
+### Types of DP (Code)
+
+- Simple Recursion
+```cpp
+void fibo{
+    if(n==0){
+        return 0;
+    }
+    if(n<=2){
+        return 1;
+    }
+    
+    return fibo(n-1) + fibo(n-2);
+}
+```
+- Top Down
+```cpp
+int fibo(int n , vector<int>&dp){
+    if(n==0){
+        return 0;
+    }
+    if(n<=2){
+        return 1;
+    }
+    if(dp[n]>0){
+        return dp[n];
+    }
+    dp[n] = fibo(n-1,dp) + fibo(n-2,dp);
+    return dp[n];
+}
+int main() {
+	// your code goes here
+	int n; cin>>n;
+	vector<int>dp(1000,0);
+	cout<<"Answer"<<" "<<fibo(n,dp);
+	return 0;
+}
+```
+
+- Bottom up (Forward DP)
+
+```cpp
+	int n; cin>>n; 
+	vector<int>dp(n+1 , 0);
+	if(n==0){
+	   cout<<0;
+	   return 0;
+	}
+	if(n<=2){
+	    cout<<1;
+	    return 0;
+	}
+	dp[0] = 0;
+	dp[1] = 1;
+	
+	for(int i=2; i<=n;i++){
+	    dp[i]=dp[i-1]+dp[i-2];
+	}
+	
+	cout<<dp[n];
+```
+
+- Bottom DP (Backward DP)
+
+```cpp
+	int n; cin>>n; 
+	vector<int>dp(n+2 , 0); // As we take two module to compute answer
+	if(n==0){
+	   cout<<0;
+	   return 0;
+	}
+	if(n<=2){
+	    cout<<1;
+	    return 0;
+	}
+	dp[0] = 0;
+	dp[1] = 1;
+	
+	for(int i=1; i<n;i++){
+	   dp[i+1]+=dp[i]; // here dp[i] already solved and can solved using find the solutions for others.
+	   dp[i+2]+=dp[i];
+	}
+	
+	cout<<dp[n];
+```
+
+
+
+
+
 
 
