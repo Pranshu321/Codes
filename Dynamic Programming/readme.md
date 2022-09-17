@@ -32,5 +32,20 @@ The parameters on which our solution depends here (n-1 , n-2).
 4. Location of Answer
 Means at the end of question where we will get our solution.
 
+## Types of DP
+
+### Top Down
+When we work from big picture to small pictures , when we have complete understanding of the question , it is useful when we have sufficient knowledeged about problem , it is method in which solve components and combine them to derive solution.
+
+- Example#1
+**Fabonacci Series**
+memorization + recursion = Top Down Dp.
+`f(4) --> f(3) --> f(2) --> f(1).`
+
+### Bottom Up
+We also cache the results store in dp or array.
+When we use bottom we find all possible cases but in top down we only find essential cases.
+`f(1) --> f(2) --> f(3) --> f(4)`
+
 
 
