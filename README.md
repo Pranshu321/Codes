@@ -1,7 +1,7 @@
 # Hello Viewer 💻
 On this side Pranshu , A keen Developer and always try to explore new things.
 
-![image](https://user-images.githubusercontent.com/86917304/190924348-3d96e5bf-e617-418e-ac03-8ef40a8a7469.png)
+![image](https://user-images.githubusercontent.com/86917304/193908779-27d656ec-ff40-4ef1-9ff2-62ee6efe7435.png)
 
 ## Topics Covered
 - [AVL Tress](https://github.com/Pranshu321/Codes/tree/master/Avl%20Trees)
