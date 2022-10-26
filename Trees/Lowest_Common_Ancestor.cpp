@@ -41,7 +41,7 @@ int32_t main() {
 	root->left->right=new node(5);
 	root->right->left=new node(6);
 	root->right->right=new node(7);
-node*n=lowest_common_ancestor(root,6,7);
+node*n=lowest_common_ancestor(root,6,4);
 cout<<n->data;
 	return 0;
 }

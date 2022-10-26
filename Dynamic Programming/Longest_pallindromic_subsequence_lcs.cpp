@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long int
-int longest_common_pallindromic_subse(string a,string b,int n,int m){
+string longest_common_pallindromic_subse(string a,string b,int n,int m){
     int dp[n+1][m+1];
     //b = reverse(a.begin(),a.end());
     for(int i=0;i<=n;i++){
@@ -15,7 +15,24 @@ int longest_common_pallindromic_subse(string a,string b,int n,int m){
             dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
         }
     }
-    return dp[n][m];
+    string ans="";
+    int i=n,j=m;
+    while(i>0 && j>0){
+        if(a[i-1]==b[j-1]){
+            ans=ans+a[i-1];
+            i--;
+            j--;
+        }
+        else if(dp[i-1][j] > dp[i][j-1]){
+            i--;
+        }
+        else{
+            j--;
+        }
+    }
+
+    reverse(ans.begin() , ans.end());
+    return ans;
 }
 int32_t main() {
 	// your code goes here

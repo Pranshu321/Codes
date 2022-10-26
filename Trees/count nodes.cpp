@@ -17,7 +17,6 @@ int countnodes(struct node*root){
     return (countnodes(root->left)+countnodes(root->right)+1);
 }
 int32_t main() {
-	// your code goes here
 	ios::sync_with_stdio(0);
 	cout.tie(0); cin.tie(0);
 	node*root=new node(1);
