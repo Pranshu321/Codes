@@ -29,7 +29,7 @@ int main()
     sort(candies, candies + n); // Sorting the array
     while (i <= j)
     {
-        mini += candies[i]; // Due to sorting inascending order the minimum value is at starting so , buying starting candy will giving minimum money want to buy candies
+        mini += candies[i]; // Due to sorting in ascending order the minimum value is at starting so , buying starting candy will giving minimum money want to buy candies
         i++;
         j = j - k; // this is that the candies which we will get in free after buying one candy and buy from last to as the large value is at last , so we take them for free..
     }

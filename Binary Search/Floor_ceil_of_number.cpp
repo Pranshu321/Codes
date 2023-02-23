@@ -9,11 +9,14 @@ int floooor(int a[], int n, int num)
     while (start <= end)
     {
         int mid = start + (end - start) / 2;
+
         if (a[mid] == num)
-            return a[mid];
-        else if (a[mid] < num)
         {
-            res = a[mid]; // saving the number which is lesser than the target element and nearest also .
+            return a[mid];
+        }
+        else if (a[mid] < num) // here we saving nearest smaller element , which is nearest to our number "num"
+        {
+            res = a[mid];
             start = mid + 1;
         }
         else

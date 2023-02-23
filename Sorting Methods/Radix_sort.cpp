@@ -92,8 +92,11 @@ void print(int arr[], int n)
 
 int main()
 {
-    int a[] = {573, 25, 415, 12, 161, 6};
+    int a[] = {3,5,1,43,56,76};
+    cout << "Before Sorting \n";
+    print(a, 6);
     radix_sort(a, 6);
+    cout << "After Counting Sort \n";
     print(a, 6);
     return 0;
 }

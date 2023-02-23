@@ -19,16 +19,17 @@ int main()
     int n;
     cin >> n;
     int a[n];
-    priority_queue<int,vector<int>,greater<int>> pq;
+    priority_queue<int, vector<int>, greater<int>> pq;
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
         pq.push(a[i]);
     }
-    cout<<pq.top()<<"\n";
+    cout << pq.top() << "\n";
     // int ans = 0;
     while (pq.size() > 1)
-    { int ans=0;
+    {
+        int ans = 0;
         int x1 = pq.top();
         pq.pop();
         int x2 = pq.top();

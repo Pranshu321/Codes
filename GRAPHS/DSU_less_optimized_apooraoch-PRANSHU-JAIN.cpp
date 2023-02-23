@@ -19,7 +19,7 @@ public:
         }
         return Find(parent[k]);
     }
-    void Union(int a, int b) // in this tep this is unotmized if x have greater size we have to make more chnages to accomate the b tree; 
+    void Union(int a, int b) // in this step this is unotmized if x have greater size we have to make more chnages to accomate the b tree; 
     {
         int x = Find(a);
         int y = Find(b);

@@ -3,10 +3,10 @@ using namespace std;
 #define ll long long int
 const int N=1000;
 vector<int>parent(N);
- vector<int>size(N);
+ vector<int>Size(N);
 void make_set(int v){
     parent[v]=v;
-    size[v]=1;
+    Size[v]=1;
 }
 int Find_set(int v){
     if(v==parent[v])
@@ -17,10 +17,10 @@ void Union_set(int a,int b){
     a=Find_set(a);
     b=Find_set(b);
     if(a!=b){
-        if(size[a]<size[b])
+        if(Size[a]<Size[b])
         swap(a,b);
         parent[b]=a;
-        size[a]+=size[b];
+        Size[a]+=Size[b];
     }
 }
 int32_t main() {

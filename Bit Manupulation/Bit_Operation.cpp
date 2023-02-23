@@ -34,7 +34,8 @@ public:
         print(n ^ (1 << pos));
     }
 
-    bool bitsInAlternatePattern(int n){
+    bool bitsInAlternatePattern(int n)
+    {
         return (n ^ (n >> 1));
     }
 
@@ -70,8 +71,8 @@ int main()
     b.setbit(5, 1);
     b.unset(5, 0);
     b.ToogleBit(5, 0);
-    // cout << b.countBit(15);
-    cout<<b.bitsInAlternatePattern(8);
+    cout << b.countBit(15);
+    cout << b.bitsInAlternatePattern(8);
 
     return 0;
 }

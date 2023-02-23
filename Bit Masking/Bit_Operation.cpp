@@ -59,8 +59,10 @@ int main()
     print(a);
     Set(a, 1);
     Unset(a, 0);
-    cout << get_bit(a, 1);
-    cout << "\n" << count_bit(7) << "\n";
+    // cout << get_bit(a, 1);
+    // cout << "\n" << count_bit(7) << "\n";
+    int b = 2<<1;
+    cout<<b;
     toggle(a, 1);
 
     return 0;

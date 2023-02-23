@@ -8,7 +8,7 @@ void Max_Sum_SubArray(int a[], int n, int k, int x)
     {
         sum += a[i];
     }
-    if (sum < x)
+    if (sum == x)
     {
         ans = sum;
     }

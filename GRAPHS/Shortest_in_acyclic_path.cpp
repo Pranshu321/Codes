@@ -1,5 +1,5 @@
 // C++ program to find single source shortest paths for Directed Acyclic Graphs
-#include<iostream>
+#include <iostream>
 #include <bits/stdc++.h>
 #define INF INT_MAX
 using namespace std;
@@ -11,9 +11,14 @@ class AdjListNode
 {
 	int v;
 	int weight;
+
 public:
-	AdjListNode(int _v, int _w) { v = _v; weight = _w;}
-	int getV()	 { return v; }
+	AdjListNode(int _v, int _w)
+	{
+		v = _v;
+		weight = _w;
+	}
+	int getV() { return v; }
 	int getWeight() { return weight; }
 };
 
@@ -27,6 +32,7 @@ class Graph
 
 	// A function used by shortestPath
 	void topologicalSortUtil(int v, bool visited[], stack<int> &Stack);
+
 public:
 	Graph(int V); // Constructor
 
@@ -104,15 +110,15 @@ void Graph::shortestPath(int s)
 		list<AdjListNode>::iterator i;
 		if (dist[u] != INF)
 		{
-		for (i = adj[u].begin(); i != adj[u].end(); ++i)
-			if (dist[i->getV()] > dist[u] + i->getWeight())
-				dist[i->getV()] = dist[u] + i->getWeight();
+			for (i = adj[u].begin(); i != adj[u].end(); ++i)
+				if (dist[i->getV()] > dist[u] + i->getWeight())
+					dist[i->getV()] = dist[u] + i->getWeight();
 		}
 	}
 
 	// Print the calculated shortest distances
 	for (int i = 0; i < V; i++)
-		(dist[i] == INF)? cout << "INF ": cout << dist[i] << " ";
+		(dist[i] == INF) ? cout << "INF " : cout << dist[i] << " ";
 }
 
 // Driver program to test above functions
@@ -133,7 +139,7 @@ int main()
 	g.addEdge(4, 5, -2);
 
 	int s = 1;
-	cout << "Following are shortest distances from source " << s <<" is ";
+	cout << "Following are shortest distances from source " << s << " is ";
 	g.shortestPath(s);
 
 	return 0;
