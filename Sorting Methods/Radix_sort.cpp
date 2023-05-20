@@ -68,6 +68,8 @@ void radix_sort(int a[], int n)
     {
         for (int j = 0; j < n; j++)
         {
+            // In other words, it extracts the i - th digit from the j - th element of the array.
+            // cout << (a[j] / (int)pow(10, i)) % 10<<" ";
             insert(bins[(a[j] / (int)pow(10, i)) % 10], a[j]);
         }
         int x = 0, y = 0;
@@ -92,11 +94,11 @@ void print(int arr[], int n)
 
 int main()
 {
-    int a[] = {3,5,1,43,56,76};
+    int a[] = {3, 5, 1, 43, 56, 76};
     cout << "Before Sorting \n";
     print(a, 6);
     radix_sort(a, 6);
-    cout << "After Counting Sort \n";
+    cout << "After Radix Sort \n";
     print(a, 6);
     return 0;
 }

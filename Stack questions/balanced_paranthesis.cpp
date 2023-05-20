@@ -18,6 +18,7 @@ bool balancedparanthesis(string s)
                 break;
             }
         }
+
         else if (s[i] == ']')
         {
             if (!st.empty() && st.top() == '[')

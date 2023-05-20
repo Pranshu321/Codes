@@ -34,6 +34,7 @@ int searching(int a[], int n, int temp)
     }
     return binary(a, low, high, temp);
 }
+
 int main()
 
 {

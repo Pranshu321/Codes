@@ -41,6 +41,7 @@ int rotations(int a[], int n)
     }
     return -1;
 }
+
 int main()
 
 {

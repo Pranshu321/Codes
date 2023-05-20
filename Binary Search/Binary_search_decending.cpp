@@ -19,7 +19,6 @@ int search_desen(int a[], int n, int num)
     return -1;
 }
 int main()
-
 {
     ios_base::sync_with_stdio(false);
     cout.tie(0);

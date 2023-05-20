@@ -40,6 +40,7 @@ node *reverse(node *&head) // iterative method for reverse;
     }
     return pre;
 }
+
 node *reverse_recur(node *&head)
 {
     {

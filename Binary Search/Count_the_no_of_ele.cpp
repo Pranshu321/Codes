@@ -1,4 +1,13 @@
 #include <bits/stdc++.h>
+/**
+ * Counts the number of occurrences of a given element in an integer array.
+ *
+ * @param a    The array to search.
+ * @param n    The number of elements in the array.
+ * @param num  The element to count.
+ *
+ * @return     The number of occurrences of the element in the array.
+ */
 
 using namespace std;
 

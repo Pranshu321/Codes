@@ -20,7 +20,7 @@ void NGR(int a[], int n)
     }
     stack<int> s;
     int ans = 0;
-    for (int i = n-1; i >=0; i--)
+    for (int i = n - 1; i >= 0; i--)
     {
         if (!s.empty() && a[s.top()] <= a[i])
         {
