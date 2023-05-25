@@ -50,8 +50,8 @@ int main()
     ios_base::sync_with_stdio(false);
     cout.tie(0);
     cin.tie(0);
-    cout << binExpRecur(2, 32) << "\n";
-    cout << IterativeMethodBinExp(2, 32);
+    cout << binExpRecur(2, 3) << "\n";
+cout << IterativeMethodBinExp(2, 3);
 
     return 0;
 }

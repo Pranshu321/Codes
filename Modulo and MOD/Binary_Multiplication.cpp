@@ -9,7 +9,7 @@
 using namespace __gnu_pbds;
 template<class T> using op_set = tree<T,null_type,less<T>,
 rb_tree_tag,tree_order_statistics_node_update>;
- const int M = 1e18+7;
+ const int M = 1e9+7;
  int binMultiply(ll a , ll b){
     int ans =0;
     while(b>0){
@@ -26,7 +26,7 @@ rb_tree_tag,tree_order_statistics_node_update>;
  { 
  ios_base:: sync_with_stdio(false);
  cout.tie(0);  cin.tie(0);
- 
+ cout<<binMultiply(2,3);
  
  
  
