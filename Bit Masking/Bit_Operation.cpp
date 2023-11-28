@@ -21,7 +21,9 @@ void print(int n)
 
 int get_bit(int n, int pos)
 {
-    return (n & (1 << pos));
+    // 0011
+    //  0001
+    return ((n & (1 << pos)));
 }
 void Set(int n, int pos)
 {
@@ -56,13 +58,14 @@ int main()
     cout.tie(0);
     cin.tie(0);
     int a = 5;
+    cout << get_bit(5, 1) << "\n";
     print(a);
     Set(a, 1);
     Unset(a, 0);
     // cout << get_bit(a, 1);
     // cout << "\n" << count_bit(7) << "\n";
-    int b = 2<<1;
-    cout<<b;
+    int b = 2 << 1;
+    cout << b;
     toggle(a, 1);
 
     return 0;

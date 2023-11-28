@@ -37,14 +37,13 @@ int main()
         y_cor.push_back(y + 1);
         sort(x_cor.begin(), x_cor.end());
         sort(y_cor.begin(), y_cor.end());
-
-        int mx = INT_MIN, my = INT_MIN;
-        for (int i = 0; i < x_cor.size() - 1; i++)
+        int mx = INT_MIN, my = INT16_MIN;
+        for (int i = 0; i < n; i++)
         {
-            mx = max(mx, x_cor[i + 1] - x_cor[i] - 1);
-            my = max(my, y_cor[i + 1] - y_cor[i] - 1);
+            mx = max(mx, x_cor[i + 1] - x_cor[i]-1);
+            my = max(my, y_cor[i + 1] - y_cor[i]-1);
         }
-        cout << mx * my << "\n";
+        cout << mx * my << endl;
     }
 
     return 0;

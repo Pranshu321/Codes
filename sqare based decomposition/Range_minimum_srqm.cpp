@@ -7,12 +7,9 @@ using namespace std;
 int main()
 
 {
-    ios_base::sync_with_stdio(false);
-    cout.tie(0);
-    cin.tie(0);
 
-    int n;
-    cin >> n;
+    int n, q;
+    cin >> n >> q;
     vector<int> a(n);
     for (int i = 0; i < n; i++)
         cin >> a[i];
@@ -25,13 +22,11 @@ int main()
     {
         b[i / len] = min(a[i], b[i / len]);
     }
-    int ans = INT_FAST8_MAX;
-    int q;
-    cin >> q;
+    int ans = INT_MAX;
     while (q--)
     {
-        int l, r;
-        cin >> l >> r;
+        int l = 0, r;
+        cin >> r;
         for (int i = l; i <= r;)
         {
             if (i % len == 0 && i + len - 1 <= r)
@@ -45,7 +40,7 @@ int main()
                 i++;
             }
         }
-        cout << ans << "\n";
+        cout << ans << " ";
     }
 
     return 0;

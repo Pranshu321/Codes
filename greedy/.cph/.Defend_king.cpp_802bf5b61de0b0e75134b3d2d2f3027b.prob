@@ -1,0 +1,1 @@
+{"name":"Local: Defend_king","url":"c:\\Users\\prans\\Desktop\\Codes Repo\\Codes\\greedy\\Defend_king.cpp","tests":[{"id":1685368085904,"input":"1\n15 8 3\n3 8 \n11 2\n8 6","output":"12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\prans\\Desktop\\Codes Repo\\Codes\\greedy\\Defend_king.cpp","group":"local","local":true}
