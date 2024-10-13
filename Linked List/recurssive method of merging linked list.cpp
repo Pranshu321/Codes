@@ -34,6 +34,7 @@ node *recursivemerge(node *&head1, node *&head2)
     }
     return ans;
 }
+
 node *merge(node *&head1, node *&head2)
 {
     node *ptr1 = head1;

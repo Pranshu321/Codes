@@ -1,0 +1,1 @@
+{"name":"Local: Balancing_Stairs","url":"c:\\Users\\prans\\Desktop\\TCS\\Balancing_Stairs.cpp","tests":[{"id":1700652587335,"input":"{**(**{**[**]})}","output":"Yes 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\prans\\Desktop\\TCS\\Balancing_Stairs.cpp","group":"local","local":true}

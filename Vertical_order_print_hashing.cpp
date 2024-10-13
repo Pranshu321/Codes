@@ -6,7 +6,7 @@ struct node{
     node*left,*right;
     node(int val){
         data=val;
-        left=right=NULL;
+        left=right= NULL;
     }
 };
 void verticleOrder(node*root,int hori_dist,map<int,vector<int>>&mp){

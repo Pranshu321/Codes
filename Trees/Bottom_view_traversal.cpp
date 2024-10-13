@@ -37,10 +37,9 @@ vector<int> bottomView(node *root)
         auto it = q.front();
         q.pop();
 
-        node *temp = it.first;
-        int line = it.second;
+        auto temp = it.first;
+        auto line = it.second;
         mp[line] = temp->data;
-
         if (temp->left)
         {
             q.push({temp->left, line - 1});
@@ -72,10 +71,11 @@ int main()
     // root->right->right = new node(7);
     // root->right->left = new node(6);
 
-    vector<int>ans = bottomView(root);
+    vector<int> ans = bottomView(root);
 
-    for(auto i : ans){
-        cout<<i<<" ";
+    for (auto i : ans)
+    {
+        cout << i << " ";
     }
 
     return 0;

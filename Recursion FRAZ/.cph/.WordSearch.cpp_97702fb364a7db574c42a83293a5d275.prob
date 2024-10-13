@@ -1,0 +1,1 @@
+{"name":"Local: WordSearch","url":"c:\\Users\\prans\\Desktop\\Codes\\Recursion FRAZ\\WordSearch.cpp","tests":[{"id":1701521015053,"input":"4 4\nc z k l\no d i a\nr g n m\nm r s d\ncoding","output":"True"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\prans\\Desktop\\Codes\\Recursion FRAZ\\WordSearch.cpp","group":"local","local":true}
