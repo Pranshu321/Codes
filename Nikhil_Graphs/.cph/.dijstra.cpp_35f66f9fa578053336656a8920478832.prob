@@ -1,0 +1,1 @@
+{"name":"Local: dijstra","url":"c:\\Users\\prans\\Desktop\\Codes\\Nikhil_Graphs\\dijstra.cpp","tests":[{"id":1762361006191,"input":"5 6\n0 1 2\n0 2 4\n1 2 1\n1 3 7\n2 4 3\n3 4 1","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\prans\\Desktop\\Codes\\Nikhil_Graphs\\dijstra.cpp","group":"local","local":true}

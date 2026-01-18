@@ -48,7 +48,7 @@ int32_t main()
     cin.tie(0);
     string s;
     cin >> s;
-    recurPermutations(s, "");
+    permutations(0,s);
 
     return 0;
 }

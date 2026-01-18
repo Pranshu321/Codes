@@ -1,1 +1,0 @@
-((index + k) % person.size())

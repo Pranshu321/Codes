@@ -1,0 +1,1 @@
+{"name":"Local: longest_increasing_substring","url":"c:\\Users\\prans\\Desktop\\Codes\\Nikhil DP\\longest_increasing_substring.cpp","tests":[{"id":1763058198414,"input":"7\n6 1 2 3 4 5 0","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\prans\\Desktop\\Codes\\Nikhil DP\\longest_increasing_substring.cpp","group":"local","local":true}
