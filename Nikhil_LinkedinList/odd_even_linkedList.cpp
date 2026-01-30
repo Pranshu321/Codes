@@ -72,46 +72,20 @@ Node *deleteNode(Node *&head, int val)
     return head;
 }
 
-Node *reverse(Node *&head)
+Node *Odd_Even(Node *&head)
 {
-    if (!head)
+    Node *odd = head;
+    Node *evenHead = head->next;
+    Node *even = head->next;
+    while ((even and even->next) and (odd and odd->next))
     {
-        return NULL;
+        odd->next = odd->next->next;
+        odd = odd->next;
+        even->next = even->next->next;
+        even = even->next;
     }
-    Node *prev = NULL;
-    Node *nex = head;
-    Node *curr = head;
-    while (nex or curr)
-    {
-        nex = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = nex;
-    }
-    return prev;
-}
-
-bool isPallin(Node *&head)
-{
-    Node *slow = head;
-    Node *fast = head;
-    while (fast and fast->next)
-    {
-        fast = fast->next->next;
-        slow = slow->next;
-    }
-    slow = reverse(slow);
-    fast = head;
-    while (slow and slow->next)
-    {
-        if (slow->data != fast->data)
-        {
-            return false;
-        }
-        slow = slow->next;
-        fast = fast->next;
-    }
-    return true;
+    odd->next = evenHead;
+    return head;
 }
 
 // Example usage
@@ -126,7 +100,7 @@ int main()
     head = insertNode(head, 10, 5); // 5 10 15 20 15 10
     head = insertNode(head, 5, 6);  // 5 10 15 20 15 10 5
     printList(head);
-    Node *t = reverse(head);
+    Node *t = Odd_Even(head);
     printList(t);
     return 0;
 }

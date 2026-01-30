@@ -126,7 +126,6 @@ int main()
     head = insertNode(head, 10, 5); // 5 10 15 20 15 10
     head = insertNode(head, 5, 6);  // 5 10 15 20 15 10 5
     printList(head);
-    Node *t = reverse(head);
-    printList(t);
+    cout << "\n is Pallindrome :" << isPallin(head);
     return 0;
 }

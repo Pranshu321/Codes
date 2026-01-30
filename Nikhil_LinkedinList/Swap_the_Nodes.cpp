@@ -46,72 +46,31 @@ void printList(Node *head)
     cout << endl;
 }
 
-Node *deleteNode(Node *&head, int val)
+Node *SwapNodes(Node *&head)
 {
-    if (!head)
-    {
-        return NULL;
-    }
-    if (head->data == val)
-    {
-        Node *t = head;
-        head = head->next;
-        delete t;
+    if (!head || !head->next)
         return head;
-    }
-    Node *temp = head;
-    while (temp->next and temp->next->data != val)
+    
+    Node *dummy = new Node(-1);
+    Node *dummyhead = dummy;
+    dummy->next = head;
+    Node *prev = dummy;
+    
+    while (prev->next && prev->next->next)
     {
-        temp = temp->next;
+        Node *swap1 = prev->next;
+        Node *swap2 = prev->next->next;
+        
+        // Perform the swap
+        swap1->next = swap2->next;
+        swap2->next = swap1;
+        prev->next = swap2;
+        
+        // Move prev to swap1 (which is now after swap2)
+        prev = swap1;
     }
-    if (!temp->next)
-        return NULL;
-    Node *del = temp->next;
-    temp->next = del->next;
-    delete del;
-    return head;
-}
-
-Node *reverse(Node *&head)
-{
-    if (!head)
-    {
-        return NULL;
-    }
-    Node *prev = NULL;
-    Node *nex = head;
-    Node *curr = head;
-    while (nex or curr)
-    {
-        nex = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = nex;
-    }
-    return prev;
-}
-
-bool isPallin(Node *&head)
-{
-    Node *slow = head;
-    Node *fast = head;
-    while (fast and fast->next)
-    {
-        fast = fast->next->next;
-        slow = slow->next;
-    }
-    slow = reverse(slow);
-    fast = head;
-    while (slow and slow->next)
-    {
-        if (slow->data != fast->data)
-        {
-            return false;
-        }
-        slow = slow->next;
-        fast = fast->next;
-    }
-    return true;
+    
+    return dummyhead->next;
 }
 
 // Example usage
@@ -126,7 +85,7 @@ int main()
     head = insertNode(head, 10, 5); // 5 10 15 20 15 10
     head = insertNode(head, 5, 6);  // 5 10 15 20 15 10 5
     printList(head);
-    Node *t = reverse(head);
+    Node *t = SwapNodes(head);
     printList(t);
     return 0;
 }
